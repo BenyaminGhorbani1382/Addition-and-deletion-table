@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Table</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <div class='light x1'></div>
+  <div class='light x2'></div>
+  <div class='light x3'></div>
+  <div class='light x4'></div>
+  <div class='light x5'></div>
+  <div class='light x6'></div>
+  <div class='light x7'></div>
+  <div class='light x8'></div>
+  <div class='light x9'></div>
+
+  <div class="input-container hidden">
+    <label for="nameInput">Name:</label>
+    <br>
+    <input type="text" id="nameInput">
+    <br>
+    <label for="phoneInput">Phone:</label>
+    <br>
+    <input type="text" id="phoneInput" maxlength="11" oninput="validatePhoneInput(this)">
+    <br>
+    <button id="addToTableBtn" class="toggle-button hidden" onclick="addToTable()">Add to Table</button>
+  </div>
+
+  <table id="myTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr>
+        <td>1</td>
+        <td contentEditable="true">benyamin</td>
+        <td>09361667449</td>
+        <td><button class="button-delete" onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td contentEditable="true">mani</td>
+        <td>09112589060</td>
+        <td><button class="button-delete" onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td contentEditable="true">danyale</td>
+        <td>09118904090</td>
+        <td><button class="button-delete" onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td contentEditable="true">hotane</td>
+        <td>09059081245</td>
+        <td><button class="button-delete" onclick="deleteRow(this)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="opening-the-extra-box">
+    <button class="Open-title" onclick="toggleInputs()">Toggle Inputs</button>
+  </div>
+
+  
+
+  
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
